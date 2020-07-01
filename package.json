@@ -1,0 +1,55 @@
+{
+  "name": "photobox",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "concurrently": "^4.1.0",
+    "express-handlebars": "^3.0.0",
+    "node-sass": "^4.11.0",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "react-loadable": "^5.5.0",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.5"
+  },
+  "scripts": {
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom-sixteen",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "node server/index.js",
+    "client": "react-scripts start",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "proxy": "http://localhost:9000",
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.0",
+    "@testing-library/react": "^10.4.3",
+    "axios": "^0.19.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-regenerator": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "history": "^5.0.0",
+    "jest-environment-jsdom-sixteen": "^1.0.3"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!<rootDir>/node_modules/",
+      "!src/**/*.stories.{js,jsx}",
+      "!src/serviceWorker.js",
+      "!src/**/index.{js,jsx}"
+    ]
+  }
+}
