@@ -39,8 +39,10 @@ test('should fully render the app', () => {
 });
 
 test('Should landing on a bad page', () => {
-  const { container } = renderWithRouter(<App />, {
+  renderWithRouter(<App />, {
     route: '/something-that-does-not-match',
   });
-  expect(container.innerHTML).toMatch('Page Not Found!');
+
+  const content = screen.getByText('Page Not Found!');
+  expect(content).toBeInTheDocument();
 });
