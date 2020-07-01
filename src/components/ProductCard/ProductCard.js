@@ -1,12 +1,6 @@
 import React from 'react';
 import './ProductCard.scss';
-
-const formatPrice = (number) => {
-  return new Intl.NumberFormat('en-GB', {
-    style: 'currency',
-    currency: 'GBP',
-  }).format(number);
-};
+import { formatPrice } from '../../utils';
 
 export const ProductCard = ({
   product: {
