@@ -1,7 +1,7 @@
 # Photobox Full Stack JS test
 
 🚨 Time spent: 1hr. With more time I would:
-  * add react-loable to replace react-router-dom routing
+  * add react-loable to replace react-router-dom for loading pages
   * add TypeScript
   * replace Sass with Styled Components
   * improve loading states
