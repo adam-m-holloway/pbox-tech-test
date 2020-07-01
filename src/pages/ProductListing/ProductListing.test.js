@@ -30,8 +30,11 @@ describe('Product Listing', () => {
     expect(axios.get).toHaveBeenCalledTimes(1);
 
     await waitFor(() => {
-      const productTitle = screen.getByText('product 1');
-      expect(productTitle).toBeInTheDocument();
+      expect(screen.getByText('product 1')).toBeInTheDocument();
+      expect(screen.getByText('product label 1')).toBeInTheDocument();
+      expect(screen.getByText('abc')).toBeInTheDocument();
+      expect(screen.getByText('£10.25')).toBeInTheDocument();
+      expect(screen.getByText('click me 1')).toBeInTheDocument();
     });
   });
 

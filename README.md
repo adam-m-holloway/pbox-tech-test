@@ -1,15 +1,18 @@
 # Photobox Full Stack JS test
 
 🚨 Time spent: 1hr. With more time I would:
-  * use react-loadable to load pages
-  * add TypeScript
-  * replace Sass with Styled Components
-  * improve loading states
-  * make height of product card inner items equal to others
-  * if app was to grow I would replace route splitting with component splitting
-  * tidy up import/export paths with use of index file in folder
-🚨
 
+- use react-loadable to load pages
+- add TypeScript
+- replace Sass with Styled Components
+- improve loading states
+- make height of product card inner items equal to others
+- if app was to grow I would replace route splitting with component splitting
+- tidy up import/export paths with use of index file in folder
+- test more items in the product card
+- iterate through mocked data in tests to save calling 1 by 1
+
+🚨
 
 This test is designed for potential full stack developers to demonstrate their coding skills. It's intended to be done in less than 90 minutes, but don't hold back in showing your skills. We're mainly interested in seeing how you approach this problem and how far you'll get.
 
