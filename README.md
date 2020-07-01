@@ -5,7 +5,7 @@
   * add TypeScript
   * replace Sass with Styled Components
   * improve loading states
-  * make height of product card inner items
+  * make height of product card inner items equal to others
   * if app was to grow I would replace route splitting with component splitting
 🚨
 
