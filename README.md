@@ -1,6 +1,13 @@
 # Photobox Full Stack JS test
 
- 🚨 Time spent: 1hr. With more time would add react-loable, TypeScript, Styled Components. 🚨
+🚨 Time spent: 1hr. With more time I would:
+  * add react-loable to replace react-router-dom routing
+  * add TypeScript
+  * replace Sass with Styled Components
+  * improve loading states
+  * make height of product card inner items
+  * if app was to grow I would replace route splitting with component splitting
+🚨
 
 
 This test is designed for potential full stack developers to demonstrate their coding skills. It's intended to be done in less than 90 minutes, but don't hold back in showing your skills. We're mainly interested in seeing how you approach this problem and how far you'll get.
