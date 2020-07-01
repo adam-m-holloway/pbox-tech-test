@@ -7,6 +7,7 @@
   * improve loading states
   * make height of product card inner items equal to others
   * if app was to grow I would replace route splitting with component splitting
+  * tidy up import/export paths with use of index file in folder
 🚨
 
 
