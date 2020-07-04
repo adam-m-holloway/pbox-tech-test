@@ -3,6 +3,7 @@ import { render, screen, waitFor } from '@testing-library/react';
 import React from 'react';
 import { ProductListing } from './ProductListing';
 import { mockProducts } from '../../__mocks__/mockProducts';
+import { formatPrice } from '../../utils';
 
 jest.mock('axios');
 
@@ -30,11 +31,28 @@ describe('Product Listing', () => {
     expect(axios.get).toHaveBeenCalledTimes(1);
 
     await waitFor(() => {
-      expect(screen.getByText('product 1')).toBeInTheDocument();
-      expect(screen.getByText('product label 1')).toBeInTheDocument();
-      expect(screen.getByText('abc')).toBeInTheDocument();
-      expect(screen.getByText('£10.25')).toBeInTheDocument();
-      expect(screen.getByText('click me 1')).toBeInTheDocument();
+      mockProducts.forEach(
+        ({
+          productLabel,
+          title,
+          description,
+          priceLabel,
+          price,
+          cta,
+          ctaLink,
+          image,
+        }) => {
+          expect(screen.getByAltText(image.alt)).toBeInTheDocument();
+          expect(screen.getByAltText(image.alt).src).toBe(image.path);
+          expect(screen.getByText(productLabel)).toBeInTheDocument();
+          expect(screen.getByText(title)).toBeInTheDocument();
+          expect(screen.getByText(description)).toBeInTheDocument();
+          expect(screen.getByText(priceLabel)).toBeInTheDocument();
+          expect(screen.getByText(formatPrice(price))).toBeInTheDocument();
+          expect(screen.getByText(cta)).toBeInTheDocument();
+          expect(screen.getByText(cta).href).toBe(ctaLink);
+        }
+      );
     });
   });
 
