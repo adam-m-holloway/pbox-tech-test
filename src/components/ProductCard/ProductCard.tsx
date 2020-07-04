@@ -40,7 +40,7 @@ export const ProductCard: FC<ProductCardProps> = ({
     <Styled.ProductCardFooter>
       <p>
         {priceLabel}
-        <span className="product-card-price">{formatPrice(price)}</span>
+        <Styled.ProductCardPrice>{formatPrice(price)}</Styled.ProductCardPrice>
       </p>
       <Styled.ProductCardCtaLink href={ctaLink}>
         {cta}

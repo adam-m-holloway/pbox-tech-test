@@ -28,6 +28,12 @@ const ProductCardLabel = styled.span`
   font-weight: bold;
 `;
 
+const ProductCardPrice = styled.span`
+  font-size: 1.5rem;
+  margin-left: 10px;
+  font-weight: bold;
+`;
+
 const ProductCardCtaLink = styled.a`
   border: 5px solid limegreen;
   display: block;
@@ -44,5 +50,6 @@ export const Styled = {
   ProductCardBody,
   ProductCardFooter,
   ProductCardLabel,
+  ProductCardPrice,
   ProductCardCtaLink,
 };
