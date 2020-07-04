@@ -1,11 +1,11 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import { Link, Route, Router, Switch } from 'react-router-dom';
 import { createMemoryHistory } from 'history';
 import { render, screen } from '@testing-library/react';
 
-import Home from './pages/Home';
-import ProductListing from './pages/ProductListing';
-import NotFound from './pages/NotFound';
+import Home from '../../pages/Home';
+import ProductListing from '../../pages/ProductListing';
+import NotFound from '../../pages/NotFound';
 
 const App = () => (
   <div>
@@ -19,7 +19,7 @@ const App = () => (
 );
 
 const renderWithRouter = (
-  ui: ReactNode,
+  ui,
   {
     route = '/',
     history = createMemoryHistory({ initialEntries: [route] }),

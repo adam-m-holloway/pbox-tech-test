@@ -1,7 +1,9 @@
-$font-size-base: 12;
+import { createGlobalStyle } from 'styled-components';
+
+export const GlobalStyle = createGlobalStyle`
 body {
-  font-family: Open Sans Regular, Helvetica, Arial, sans-serif; //$font-family-base;
-  font-size: $font-size-base;
+  font-family: "Open Sans Regular, Helvetica, Arial, sans-serif";
+  font-size: 12;
   -webkit-font-smoothing: antialiased;
   color: #3b4153;
 }
@@ -19,3 +21,5 @@ body {
 img {
   max-width: 100%;
 }
+
+`;

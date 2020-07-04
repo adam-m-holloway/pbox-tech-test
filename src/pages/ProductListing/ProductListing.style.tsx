@@ -1,4 +1,6 @@
-.product-listing-content {
+import styled from 'styled-components';
+
+const ProductListingContent = styled.div`
   display: grid;
   grid-gap: 16px;
 
@@ -9,4 +11,6 @@
   @media (min-width: 768px) {
     grid-template-columns: repeat(3, 1fr);
   }
-}
+`;
+
+export const Styled = { ProductListingContent };

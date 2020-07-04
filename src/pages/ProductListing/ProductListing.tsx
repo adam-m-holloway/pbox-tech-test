@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 import { ProductCard, ProductCardProps } from '../../components/ProductCard';
-import './ProductListing.scss';
+import { Styled } from './ProductListing.style';
 
 export const ProductListing = () => {
   const [loading, setLoading] = useState<boolean>(true);
@@ -33,11 +33,11 @@ export const ProductListing = () => {
       {error && <span>Error: {error.message}</span>}
 
       {products && (
-        <div className="product-listing-content">
+        <Styled.ProductListingContent>
           {products.map((product: ProductCardProps, index: number) => (
             <ProductCard {...product} key={`${index}-${product.title}`} />
           ))}
-        </div>
+        </Styled.ProductListingContent>
       )}
     </div>
   );
