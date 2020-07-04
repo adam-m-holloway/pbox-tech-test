@@ -53,11 +53,11 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "src/**/*.{js,jsx}",
+      "src/**/*.{ts,tsx}",
       "!<rootDir>/node_modules/",
-      "!src/**/*.stories.{js,jsx}",
+      "!src/**/*.stories.{ts,tsx}",
       "!src/serviceWorker.js",
-      "!src/**/index.{js,jsx}"
+      "!src/**/index.{ts,tsx}"
     ]
   }
 }

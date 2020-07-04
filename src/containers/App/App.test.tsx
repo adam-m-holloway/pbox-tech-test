@@ -1,11 +1,12 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import { Link, Route, Router, Switch } from 'react-router-dom';
 import { createMemoryHistory } from 'history';
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 
 import Home from '../../pages/Home';
 import ProductListing from '../../pages/ProductListing';
 import NotFound from '../../pages/NotFound';
+import { renderWithRouter } from '../../utils/testUtils';
 
 const App = () => (
   <div>
@@ -17,17 +18,6 @@ const App = () => (
     </Switch>
   </div>
 );
-
-const renderWithRouter = (
-  ui: ReactNode,
-  {
-    route = '/',
-    history = createMemoryHistory({ initialEntries: [route] }),
-  } = {}
-) => ({
-  ...render(<Router history={history}>{ui}</Router>),
-  history,
-});
 
 test('should fully render the app', () => {
   renderWithRouter(<App />);
