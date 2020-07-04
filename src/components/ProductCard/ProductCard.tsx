@@ -3,32 +3,28 @@ import './ProductCard.scss';
 import { formatPrice } from '../../utils';
 
 export interface ProductCardProps {
-  product: {
-    image: {
-      path: string;
-      alt: string;
-    };
-    productLabel?: string;
-    title: string;
-    description: string;
-    priceLabel: string;
-    price: number;
-    ctaLink: string;
-    cta: string;
+  image: {
+    path: string;
+    alt: string;
   };
+  productLabel?: string;
+  title: string;
+  description: string;
+  priceLabel: string;
+  price: number;
+  ctaLink: string;
+  cta: string;
 }
 
 export const ProductCard: FC<ProductCardProps> = ({
-  product: {
-    image,
-    productLabel,
-    title,
-    description,
-    priceLabel,
-    price,
-    ctaLink,
-    cta,
-  },
+  image,
+  productLabel,
+  title,
+  description,
+  priceLabel,
+  price,
+  ctaLink,
+  cta,
 }) => (
   <div className="product-card">
     <div className="product-card-header">

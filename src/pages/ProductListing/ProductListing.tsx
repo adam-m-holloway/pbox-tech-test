@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-import { ProductCard } from '../../components/ProductCard';
+import { ProductCard, ProductCardProps } from '../../components/ProductCard';
 import './ProductListing.scss';
 
 export const ProductListing = () => {
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<{ message: string } | null>(null);
+  const [products, setProducts] = useState<ProductCardProps[]>([]);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -34,8 +34,8 @@ export const ProductListing = () => {
 
       {products && (
         <div className="product-listing-content">
-          {products.map((product, index) => (
-            <ProductCard product={product} key={`${index}-${product.name}`} />
+          {products.map((product: ProductCardProps, index: number) => (
+            <ProductCard {...product} key={`${index}-${product.title}`} />
           ))}
         </div>
       )}
