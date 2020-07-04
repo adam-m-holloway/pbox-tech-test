@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-import { ProductCard } from '../../components/ProductCard/ProductCard';
+import { ProductCard } from '../../components/ProductCard';
 import './ProductListing.scss';
 
-const ProductListing = () => {
+export const ProductListing = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [products, setProducts] = useState([]);
@@ -42,5 +42,3 @@ const ProductListing = () => {
     </div>
   );
 };
-
-export default ProductListing;

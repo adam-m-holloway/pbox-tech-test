@@ -1,8 +1,24 @@
-import React from 'react';
+import React, { FC } from 'react';
 import './ProductCard.scss';
 import { formatPrice } from '../../utils';
 
-export const ProductCard = ({
+export interface ProductCardProps {
+  product: {
+    image: {
+      path: string;
+      alt: string;
+    };
+    productLabel?: string;
+    title: string;
+    description: string;
+    priceLabel: string;
+    price: number;
+    ctaLink: string;
+    cta: string;
+  };
+}
+
+export const ProductCard: FC<ProductCardProps> = ({
   product: {
     image,
     productLabel,

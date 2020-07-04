@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { render, screen, waitFor } from '@testing-library/react';
 import React from 'react';
-import ProductListing from './ProductListing';
+import { ProductListing } from './ProductListing';
 import { mockProducts } from '../../__mocks__/mockProducts';
 
 jest.mock('axios');

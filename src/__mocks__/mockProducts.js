@@ -1,6 +1,9 @@
 export const mockProducts = [
   {
-    image: 'http://',
+    image: {
+      path: 'http://imagepath1.jpg',
+      alt: 'image 1',
+    },
     productLabel: 'best seller 1',
     title: 'product 1',
     description: 'abc',
@@ -11,7 +14,10 @@ export const mockProducts = [
     cta: 'click me 1',
   },
   {
-    image: 'http://',
+    image: {
+      path: 'http://imagepath2.jpg',
+      alt: 'image 2',
+    },
     productLabel: 'best seller 2',
     title: 'product 2',
     description: 'another product',
