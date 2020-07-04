@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import './ProductCard.scss';
 import { formatPrice } from '../../utils';
+import { Styled } from './ProductCard.style';
 
 export interface ProductCardProps {
   image: {
@@ -26,25 +26,25 @@ export const ProductCard: FC<ProductCardProps> = ({
   ctaLink,
   cta,
 }) => (
-  <div className="product-card">
-    <div className="product-card-header">
+  <Styled.ProductCard>
+    <Styled.ProductCardHeader>
       <img src={image.path} alt={image.alt} />
       {productLabel && (
-        <span className="product-card-label">{productLabel}</span>
+        <Styled.ProductCardLabel>{productLabel}</Styled.ProductCardLabel>
       )}
-    </div>
-    <div className="product-card-body">
+    </Styled.ProductCardHeader>
+    <Styled.ProductCardBody>
       <h3>{title}</h3>
       <p>{description}</p>
-    </div>
-    <div className="product-card-footer">
+    </Styled.ProductCardBody>
+    <Styled.ProductCardFooter>
       <p>
         {priceLabel}
         <span className="product-card-price">{formatPrice(price)}</span>
       </p>
-      <a className="product-card-cta-link" href={ctaLink}>
+      <Styled.ProductCardCtaLink href={ctaLink}>
         {cta}
-      </a>
-    </div>
-  </div>
+      </Styled.ProductCardCtaLink>
+    </Styled.ProductCardFooter>
+  </Styled.ProductCard>
 );

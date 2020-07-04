@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
 body {
-  font-family: "Open Sans Regular, Helvetica, Arial, sans-serif";
+  font-family: 'Open Sans Regular', Helvetica, Arial, sans-serif;
   font-size: 12;
   -webkit-font-smoothing: antialiased;
   color: #3b4153;

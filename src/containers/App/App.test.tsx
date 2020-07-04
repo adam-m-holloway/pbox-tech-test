@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { Link, Route, Router, Switch } from 'react-router-dom';
 import { createMemoryHistory } from 'history';
 import { render, screen } from '@testing-library/react';
@@ -19,7 +19,7 @@ const App = () => (
 );
 
 const renderWithRouter = (
-  ui,
+  ui: ReactNode,
   {
     route = '/',
     history = createMemoryHistory({ initialEntries: [route] }),
