@@ -11,7 +11,7 @@ const Home = Loadable({
 });
 
 const ProductListing = Loadable({
-  loader: () => import('@src/pages/ProductListing'),
+  loader: () => import('../../pages/ProductListing'),
   loading: () => <Spinner />,
 });
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { Styled } from './Spinner.style';
 
 export const Spinner = () => (
-  <Styled.Spinner viewBox="0 0 50 50">
+  <Styled.Spinner viewBox="0 0 50 50" data-testid="spinner">
     <circle
       className="path"
       cx="25"

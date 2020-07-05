@@ -12,14 +12,14 @@ describe('Product Listing', () => {
     jest.resetAllMocks();
   });
 
-  it('should show loading state when first loading the page', async () => {
+  it('should show loading spinner when first loading the page', async () => {
     axios.get.mockResolvedValue({ data: mockProducts });
     render(<ProductListing />);
 
     expect(axios.get).toHaveBeenCalledTimes(1);
 
     await waitFor(() => {
-      const loading = screen.getByText('Loading...');
+      const loading = screen.getByTestId('spinner');
       expect(loading).toBeInTheDocument();
     });
   });

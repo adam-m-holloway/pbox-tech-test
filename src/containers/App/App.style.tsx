@@ -1,31 +1,29 @@
 import { createGlobalStyle } from 'styled-components';
+import { config } from '../../config';
+
+const {
+  styles: { font },
+} = config;
 
 export const GlobalStyle = createGlobalStyle`
+  html {
+    font-size: 62.5%;
+  }
+
   html, body {
     margin: 0;
     padding: 0;
   }
 
   body {
-    font-family: 'Open Sans Regular', Helvetica, Arial, sans-serif;
-    font-size: 12;
+    font-family: ${font.baseFamily};
+    font-size: ${font.baseSize};
     -webkit-font-smoothing: antialiased;
-    color: #3b4153;
+    color: ${font.baseColour};
   }
 
   main {
     margin: 0 20px;
-  }
-
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
   }
 
   img {

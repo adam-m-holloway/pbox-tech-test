@@ -1,4 +1,9 @@
 import styled from 'styled-components';
+import { config } from '../../config';
+
+const {
+  styles: { colour },
+} = config;
 
 const Spinner = styled.svg`
   position: absolute;
@@ -11,7 +16,7 @@ const Spinner = styled.svg`
   height: 50px;
 
   & .path {
-    stroke: #007377;
+    stroke: ${colour.teal};
     stroke-linecap: round;
     animation: dash 1.5s ease-in-out infinite;
   }

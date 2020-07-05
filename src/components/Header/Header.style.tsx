@@ -1,17 +1,22 @@
 import styled from 'styled-components';
+import { config } from '../../config';
+
+const {
+  styles: { spacing, colour },
+} = config;
 
 const Header = styled.header`
   color: white;
-  border-bottom: 2px solid #d3d3d3;
+  border-bottom: 2px solid ${colour.border};
   text-align: center;
-  background-color: #007377;
+  background-color: ${colour.teal};
   display: flex;
   align-items: center;
 `;
 
 const HeaderLogo = styled.img`
-  padding: 20px;
-  background-color: #007377;
+  padding: ${spacing};
+  background-color: ${colour.teal};
 `;
 
 const HeaderNav = styled.nav`

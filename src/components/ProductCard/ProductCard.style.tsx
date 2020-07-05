@@ -1,9 +1,14 @@
 import styled from 'styled-components';
+import { config } from '../../config';
+
+const {
+  styles: { spacing, colour },
+} = config;
 
 const ProductCard = styled.div`
   border: 1px solid #ddd;
   height: 100%;
-  margin-bottom: 20px;
+  margin-bottom: ${spacing};
 `;
 
 const ProductCardHeader = styled.div`
@@ -37,7 +42,7 @@ const ProductCardPrice = styled.span`
 const ProductCardCtaLink = styled.a`
   border: 5px solid limegreen;
   display: block;
-  padding: 20px;
+  padding: ${spacing};
   text-align: center;
   text-decoration: none;
   color: black;
