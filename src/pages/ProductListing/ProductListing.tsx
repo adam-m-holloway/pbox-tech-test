@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import { ProductCard, ProductCardProps } from '../../components/ProductCard';
 import { Styled } from './ProductListing.style';
+import { Spinner } from '../../components/Spinner';
 
 export const ProductListing = () => {
   const [loading, setLoading] = useState<boolean>(true);
@@ -28,7 +29,7 @@ export const ProductListing = () => {
     <div className="product-listing">
       <h1>Product Listing Page</h1>
 
-      {loading && <span>Loading...</span>}
+      {loading && <Spinner />}
 
       {error && <span>Error: {error.message}</span>}
 

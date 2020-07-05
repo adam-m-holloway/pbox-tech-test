@@ -8,7 +8,7 @@ Test completed by Adam Holloway. All tasks have been completed. Details of work 
 - Replaced JavaScript with TypeScript for type safety
 - Used [React Testing Library](https://www.npmjs.com/package/@testing-library/react) for unit tests
 - Used [React Router DOM](https://www.npmjs.com/package/react-router-dom) for routing between home, product and error page
-- Route based code splitting of app (would use component based splitting if app grows larger)
+- Route based code splitting of app using [React Loadable](https://www.npmjs.com/package/react-loadable) (would use component based splitting if app grows larger)
 - Added home page
 - Added page for listing products
 - Added "Not Found" page for bad routes

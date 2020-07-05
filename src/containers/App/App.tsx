@@ -1,27 +1,38 @@
-import React, { lazy, Suspense } from 'react';
+import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Loadable from 'react-loadable';
 import { Header } from '../../components/Header';
 import { GlobalStyle } from './App.style';
+import { Spinner } from '../../components/Spinner';
 
-const Home = lazy(() => import('../../pages/Home'));
-const ProductListing = lazy(() => import('../../pages/ProductListing'));
-const NotFound = lazy(() => import('../../pages/NotFound'));
+const Home = Loadable({
+  loader: () => import('../../pages/Home'),
+  loading: () => <Spinner />,
+});
+
+const ProductListing = Loadable({
+  loader: () => import('@src/pages/ProductListing'),
+  loading: () => <Spinner />,
+});
+
+const NotFound = Loadable({
+  loader: () => import('../../pages/NotFound'),
+  loading: () => <Spinner />,
+});
 
 export const App = () => {
   return (
     <>
       <GlobalStyle />
       <BrowserRouter>
-        <Suspense fallback={<div>Loading...</div>}>
-          <Header />
-          <main>
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/products" component={ProductListing} />
-              <Route path="*" component={NotFound} />
-            </Switch>
-          </main>
-        </Suspense>
+        <Header />
+        <main>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/products" component={ProductListing} />
+            <Route path="*" component={NotFound} />
+          </Switch>
+        </main>
       </BrowserRouter>
     </>
   );

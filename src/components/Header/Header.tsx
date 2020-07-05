@@ -5,7 +5,14 @@ import pboxLogo from '../../assets/images/pbox-logo.svg';
 
 export const Header = () => (
   <Styled.Header>
-    <Styled.HeaderLogo src={pboxLogo} alt="pbox logo" width="209" height="37" />
+    <Link to="/">
+      <Styled.HeaderLogo
+        src={pboxLogo}
+        alt="pbox logo"
+        width="209"
+        height="37"
+      />
+    </Link>
     <Styled.HeaderNav>
       <ul>
         <li>
