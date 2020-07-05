@@ -1,11 +1,11 @@
 import React from 'react';
 import { screen } from '@testing-library/react';
-import { HeaderNav } from './HeaderNav';
+import { Header } from './Header';
 import { renderWithRouter } from '../../utils/testUtils';
 
-describe('Header Nav', () => {
+describe('Header', () => {
   it('should all links', () => {
-    renderWithRouter(<HeaderNav />);
+    renderWithRouter(<Header />);
 
     expect(screen.getByText('Home')).toBeInTheDocument();
     expect(screen.getByText('Home').href).toBe('http://localhost/');

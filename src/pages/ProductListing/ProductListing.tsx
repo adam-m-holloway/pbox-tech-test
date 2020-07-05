@@ -26,7 +26,7 @@ export const ProductListing = () => {
 
   return (
     <div className="product-listing">
-      <h1>Listing Page</h1>
+      <h1>Product Listing Page</h1>
 
       {loading && <span>Loading...</span>}
 
@@ -35,7 +35,7 @@ export const ProductListing = () => {
       {products && (
         <Styled.ProductListingContent>
           {products.map((product: ProductCardProps, index: number) => (
-            <ProductCard {...product} key={`${index}-${product.title}`} />
+            <ProductCard {...product} key={`product-card-${index}`} />
           ))}
         </Styled.ProductListingContent>
       )}
