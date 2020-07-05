@@ -25,3 +25,9 @@ yarn start
 # Run the unit tests
 yarn test
 ```
+
+## Screenshot
+
+Screenshot of app product listing page.
+
+![Product Listing Page screenshot](./src/assets/images/product-listing-screenshot.png)
